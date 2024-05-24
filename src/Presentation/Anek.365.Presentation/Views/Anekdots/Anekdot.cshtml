@@ -1,0 +1,74 @@
+﻿@model Anek._365.Presentation.Controllers.Anekdots.GetAnekdotViewModel
+
+@{
+    ViewBag.Title = "Анекдот";
+    Layout = Model.User is null ? "_LayoutUnauthorized" : "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/anekdots/anekdot-style.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <article class="anek">
+        <div class="anek__content">
+
+            <p class="anek__title">@Model.Title</p>
+            <p class="anek__text" style="white-space: pre-line">@Model.Text</p>
+
+            <div class="tags-container">
+                <div class="tags-list">
+                    @foreach (var tag in Model.Tags)
+                    {
+                        <a class="tag" href="@Url.Action("GetNew", "Tags", new { name = tag.StandardName })">
+                            @tag.Name
+                        </a>
+                    }
+                </div>
+            </div>
+            <div class="user-container">
+                <a>Пользователь: </a>
+                <a class="user" href="@Url.Action("GetNew", "Users", new { name = Model.Author.StandardName })">
+                    @Model.Author.Name
+                </a>
+            </div>
+        </div>
+        <div class="anek__info">
+            <p>
+                Просмотров
+                <a class="anek__views" data-anek=@Model.AnekId>
+                    @Model.Views
+                </a>
+                &#x1F441;
+            </p>
+            <p class="anek__rating">
+                @if (Model.User is null)
+                {
+                    <a>Рейтинг: </a>
+                    <span class="anek-single__info-mark">@Model.Mark </span>
+                }
+                @if (Model.User is not null)
+                {
+                    <button class="anek__mark-up" data-anek=@Model.AnekId>
+                        &#9650;
+                    </button>
+
+                    <a>Рейтинг: </a>
+                    <span class="anek-single__info-mark">@Model.Mark </span>
+
+                    <button class="anek__mark-down" data-anek=@Model.AnekId>
+                        &#9660;
+                    </button>
+                }
+
+            </p>
+            <p class="anek__date">Опубликован: @Model.Date.ToString()</p>
+        </div>
+    </article>
+</main>
+<script src="~/js/shared/styles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.9/signalr.min.js"></script>
+<script src="~/js/anekdots/update-single-data.js"></script>

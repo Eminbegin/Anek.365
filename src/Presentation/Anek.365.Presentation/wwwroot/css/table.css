@@ -1,0 +1,83 @@
+.main {
+  padding-bottom: 100px;
+  width: 85%;
+  margin: 70px auto 0 auto;
+
+  .jokes-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+
+    .jokes-form__input-title {
+      color: white;
+      background-color: black;
+      border: 2px solid orange;
+      border-radius: 1px;
+      width: 150px;
+      padding: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+    .jokes-form__input-text {
+      color: white;
+      background-color: black;
+      border: 2px solid orange;
+      border-radius: 1px;
+      width: 400px;
+      height: 200px;
+      padding: 10px;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+
+  .jokes {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+
+    .jokes__row {
+      &:nth-child(even) {
+        background-color: #884c4c;
+      }
+
+      &:hover {
+        cursor: pointer;
+        background-color: #6e2121;
+      }
+
+      .jokes__title,
+      .jokes__data {
+        border: 1px solid #ddd;
+        /*display: flex;*/
+        padding: 8px;
+        overflow: hidden;
+        max-width: 60vw;
+        text-overflow: ellipsis;
+      }
+      .jokes__data-title{
+        border: 1px solid #ddd;
+        padding: 8px;
+        overflow: hidden;
+        max-width: 15vw;
+        text-overflow: ellipsis;
+      }
+
+      .jokes__data-cell{
+        display: flex;
+      }
+
+      .jokes__title {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #460000;
+        color: white;
+      }
+    }
+  }
+}

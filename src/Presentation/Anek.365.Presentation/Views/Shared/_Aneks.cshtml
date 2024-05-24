@@ -1,0 +1,27 @@
+﻿@model Anek._365.Presentation.Controllers.IHaveAneks
+
+<div class="aneks-container">
+    @foreach (var anek in Model.Aneks)
+    {
+        <div class="anek-single" data-id="@anek.Id" data-title="@anek.Title" data-text="@anek.Content">
+            <a class="anek-single__text" href="@Url.Action("GetAnekdot", "Anekdots", new { id = anek.Id })">@anek.Content</a>
+            <div class="anek-single__info">
+                <div>
+                    <p>
+                        Мнение общества:
+                        <span data-id="@anek.Id" class="anek-single__info-mark">@anek.Mark.ToString()</span>
+                    </p>
+
+                </div>
+                <div>
+                    <span>
+                        Просмотров:
+                        <a data-id="@anek.Id" class="anek-single__info-views">
+                            @anek.Views.ToString()
+                        </a> &#x1F441;
+                    </span>
+                </div>
+            </div>
+        </div>
+    }
+</div>

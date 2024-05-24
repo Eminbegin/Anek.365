@@ -1,0 +1,30 @@
+﻿@model Anek._365.Presentation.Controllers.Tags.TagsListModel
+
+@{
+    ViewBag.Title = "Tags";
+    Layout = Model.User is null ? "_LayoutUnauthorized" : "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/shared/styles.css" rel="stylesheet">
+    <link href="~/css/shared/button-styles.css" rel="stylesheet">
+    <link href="~/css/tags/tags-styles.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <div class="tags-container">
+        @foreach (var tag in Model.TagsList)
+        {
+            <div class="tag__single" data-count=@tag.Count.ToString() data-name="@tag.Name">
+                <a class="tag__element"
+                   href="@Url.Action("GetNew", "Tags", new {name = tag.StandardName})">
+                    @tag.Name
+                </a>
+            </div>
+        }
+    </div>
+</main>
+<script src="~/js/tags/show-count.js"></script>

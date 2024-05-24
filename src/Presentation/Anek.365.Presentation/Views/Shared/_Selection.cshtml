@@ -1,0 +1,69 @@
+﻿@model Anek._365.Presentation.Controllers.Home.HomeViewModel
+
+<div class="selections-container">
+    <a class="selection__new @(Model.Buttons.New ? "selection__selected" : "selection__no-selected")"
+       href="@Url.Action("GetAnekdots", "Home")">
+        Новые
+    </a>
+    
+    <a class="prev_button" style="visibility: @(Model.PageNumber == 1 ? "hidden" : "visible")"
+       href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber - 1, period = Model.Period })">
+        назад
+    </a>
+    <div class="selection__popular-container">
+        <a class="selection__popular-button dropdown__button @(Model.Buttons.Popular ? "selection__selected" : "selection__no-selected")">
+            Популярное
+        </a>
+        <div>
+            <div class="selection__popular-values-container dropdown__list">
+                <a class="selection__values"
+                   href="@Url.Action("GetPopularAnekdots", "HomePopular", new { period = "alltime" })">
+                    Всё время
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetPopularAnekdots", "HomePopular", new { period = "week" })">
+                    Неделя
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetPopularAnekdots", "HomePopular", new { period = "month" })">
+                    Месяц
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetPopularAnekdots", "HomePopular", new { period = "year" })">
+                    Год
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <a data-maxpage="@Model.MaxPage" data-page="@Model.PageNumber" class="next_button" style="visibility: @(Model.PageNumber == Model.MaxPage ? "hidden" : "visible")"
+       href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber + 1, period = Model.Period })">
+        вперёд
+    </a>
+
+    <div class="selection__more-viewed-container">
+        <a class="selection__more-viewed-button dropdown__button @(Model.Buttons.MoreViewed ? "selection__selected" : "selection__no-selected")">
+            Больше просмотров
+        </a>
+        <div>
+            <div class="selection__more-viewed-values-container dropdown__list">
+                <a class="selection__values"
+                   href="@Url.Action("GetMoreViewedAnekdots", "HomeMoreView", new { period = "alltime" })">
+                    Всё время
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetMoreViewedAnekdots", "HomeMoreView", new { period = "week" })">
+                    Неделя
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetMoreViewedAnekdots", "HomeMoreView", new { period = "month" })">
+                    Месяц
+                </a>
+                <a class="selection__values"
+                   href="@Url.Action("GetMoreViewedAnekdots", "HomeMoreView", new { period = "year" })">
+                    Год
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <title>@ViewData["Title"]</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="~/images/as.jpg"/>
+    @* <link href="~/css/styles.css" rel="stylesheet"> *@
+    @await RenderSectionAsync("HeadArea")
+</head>
+<body>
+@await Html.PartialAsync("_HeaderUnauthorized")
+@RenderBody()
+@await Html.PartialAsync("_Footer")
+</body>
+@await RenderSectionAsync("FootArea")

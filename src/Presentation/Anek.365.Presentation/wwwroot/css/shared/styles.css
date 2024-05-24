@@ -1,0 +1,98 @@
+﻿.selections-container {
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.aneks-container {
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 5%;*/
+    justify-content: space-evenly;
+}
+
+.anek-single {
+    display: flex;
+    flex-direction: column;
+    background-color: #9d5252;
+    width: 40%;
+    margin: 10px;
+    height: 250px;
+    transition: background-color 0.5s ease;
+}
+
+.anek-single:hover {
+    background-color: orange;
+
+    .anek-single__text {
+        font-size: 4vw;
+        /*font-family: "Kunstler Script", serif;*/
+        font-family: "Bangers", system-ui;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+.bangers-regular {
+
+    font-weight: 400;
+    font-style: normal;
+}
+
+.anek-single__text {
+    padding: 20px;
+    color: black;
+    font-size: 25px;
+    height: 200px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-decoration: none;
+}
+
+.anek-single__info {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.anek-single__info-mark {
+    padding: 0 10px;
+}
+
+.anek-single__info-views {
+}
+
+.selection__popular-container,
+.selection__more-viewed-container {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown__button {
+}
+
+.dropdown__button[open=true] ~ div .dropdown__list {
+    display: flex;
+}
+
+.dropdown__button ~ div .dropdown__list {
+    display: none;
+}
+
+.selection__popular-values-container,
+.selection__more-viewed-values-container {
+    display: none;
+    z-index: 52;
+    width: 15%;
+    position: absolute;
+    flex-direction: column;
+}

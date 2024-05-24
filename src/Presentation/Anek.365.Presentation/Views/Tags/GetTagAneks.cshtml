@@ -1,0 +1,59 @@
+﻿@model Anek._365.Presentation.Controllers.Tags.TagAneksModel
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = Model.User is null ? "_LayoutUnauthorized" : "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/shared/styles.css" rel="stylesheet">
+    <link href="~/css/shared/button-styles.css" rel="stylesheet">
+    <link href="~/css/tags/tags-styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+}
+
+@section FootArea { }
+
+<main>
+    <div class="selections-container">
+        <a class="selection__new @(Model.Buttons.New ? "selection__selected" : "selection__no-selected")"
+           href="@Url.Action("GetNew", "Tags", new { name = Model.StandardName })">
+            Новые
+        </a>
+
+        <a class="prev_button" style="visibility: @(Model.PageNumber == 1 ? "hidden" : "visible")"
+           href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber - 1, name = Model.StandardName })">
+            U+1F519
+        </a>
+        
+        <div class="selection__popular-container">
+            <a class="selection__popular-button @(Model.Buttons.Popular ? "selection__selected" : "selection__no-selected")"
+               href="@Url.Action("GetPopular", "Tags", new { name = Model.StandardName })">
+                Популярное
+            </a>
+
+        </div>
+
+        <a class="next_button" style="visibility: @(Model.PageNumber == Model.MaxPage ? "hidden" : "visible")"
+           href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber + 1, name = Model.StandardName })">
+            U+1F519
+        </a>
+        
+        <div class="selection__more-viewed-container">
+            <a class="selection__more-viewed-button @(Model.Buttons.MoreViewed ? "selection__selected" : "selection__no-selected")"
+               href="@Url.Action("GetMoreViewed", "Tags", new { name = Model.StandardName })">
+                Больше просмотров
+            </a>
+        </div>
+    </div>
+    @await Html.PartialAsync("_Aneks")
+
+</main>
+<script src="~/js/shared/styles.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.9/signalr.min.js"></script>
+<script src="~/js/anekdots/update-data.js"></script>
+<script src="~/js/shared/show-title.js"></script>

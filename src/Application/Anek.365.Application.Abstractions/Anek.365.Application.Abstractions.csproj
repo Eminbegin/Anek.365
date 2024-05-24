@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    
+    <ItemGroup>
+        <PackageReference Include="SourceKit.Generators.Builder"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Anek.365.Application.Models\Anek.365.Application.Models.csproj" />
+    </ItemGroup>
+
+</Project>

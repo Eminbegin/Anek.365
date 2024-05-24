@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Login";
+    Layout = "_LayoutWithOutHeader";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/login/login-styles.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <div class="login__content">
+        <a class="login__logo" href="@Url.Action("GetAnekdots", "Home")">
+            <img style="width: 100%;" src="/images/anek365.png" alt="Logo">
+        </a>
+        <div class="login-container">
+
+            <form class="login__form" method="post">
+                <div class="login__item">
+                    <label for="name" class="login__label">NickName / Email</label>
+                    <input type="text" name="Name" id="name" class="login__input" required/>
+                </div>
+                <div class="login__item">
+                    <label for="password" class="login__label">Телефон матери</label>
+                    <input type="password" name="password" id="password" class="login__input" required/>
+                </div>
+
+                <div class="login__submit">
+                    <input class="login__submit-button" type="submit" value="СМАЧНО ПЁРНУТЬ"/>
+                </div>
+            </form>
+        </div>
+    </div>
+</main>

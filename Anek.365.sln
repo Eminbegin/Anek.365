@@ -1,0 +1,73 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "common", "common", "{0B7DDC00-DEF5-4F31-A6FE-2F54FF9AD11E}"
+	ProjectSection(SolutionItems) = preProject
+		common\Dockerfile = Dockerfile
+		common\Directory.Build.props = Directory.Build.props
+		common\Directory.Packages.props = Directory.Packages.props
+		common\docker-compose.yaml = docker-compose.yaml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C26A4D67-B4E3-4633-8455-C9468A60B936}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{75845AA7-AC56-4E3D-B586-13557A08F6DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Presentation", "src\Presentation\Anek.365.Presentation\Anek.365.Presentation.csproj", "{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{160986D1-3211-4E85-9D64-8EBF25154080}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Application", "src\Application\Anek.365.Application\Anek.365.Application.csproj", "{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Application.Abstractions", "src\Application\Anek.365.Application.Abstractions\Anek.365.Application.Abstractions.csproj", "{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{3FC32A64-9034-47A1-85D4-5D6C8E43C335}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Infrastructure.DataAccess", "src\Infrastructure\Anek.365.Infrastructure.DataAccess\Anek.365.Infrastructure.DataAccess.csproj", "{A265F49D-11EB-411A-BFC7-80FBB0B31F56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Application.Models", "src\Application\Anek.365.Application.Models\Anek.365.Application.Models.csproj", "{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Anek.365.Application.Contracts", "src\Application\Anek.365.Application.Contracts\Anek.365.Application.Contracts.csproj", "{2C21E9BC-9917-49C2-BFCD-1B06804978A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{75845AA7-AC56-4E3D-B586-13557A08F6DB} = {C26A4D67-B4E3-4633-8455-C9468A60B936}
+		{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6} = {75845AA7-AC56-4E3D-B586-13557A08F6DB}
+		{160986D1-3211-4E85-9D64-8EBF25154080} = {C26A4D67-B4E3-4633-8455-C9468A60B936}
+		{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300} = {160986D1-3211-4E85-9D64-8EBF25154080}
+		{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD} = {160986D1-3211-4E85-9D64-8EBF25154080}
+		{3FC32A64-9034-47A1-85D4-5D6C8E43C335} = {C26A4D67-B4E3-4633-8455-C9468A60B936}
+		{A265F49D-11EB-411A-BFC7-80FBB0B31F56} = {3FC32A64-9034-47A1-85D4-5D6C8E43C335}
+		{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6} = {160986D1-3211-4E85-9D64-8EBF25154080}
+		{2C21E9BC-9917-49C2-BFCD-1B06804978A0} = {160986D1-3211-4E85-9D64-8EBF25154080}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E7794A15-B300-4D8C-8145-4D3BD3E9EAD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CE3C6CD-C40D-4CB3-A20E-AFABF5CBE300}.Release|Any CPU.Build.0 = Release|Any CPU
+		{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{180FCC8B-0D4A-4566-8F89-EEB27C1A35AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A265F49D-11EB-411A-BFC7-80FBB0B31F56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A265F49D-11EB-411A-BFC7-80FBB0B31F56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A265F49D-11EB-411A-BFC7-80FBB0B31F56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A265F49D-11EB-411A-BFC7-80FBB0B31F56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1CE8F6A-A67C-4EDA-9BC1-0B54196F4DE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C21E9BC-9917-49C2-BFCD-1B06804978A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C21E9BC-9917-49C2-BFCD-1B06804978A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C21E9BC-9917-49C2-BFCD-1B06804978A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C21E9BC-9917-49C2-BFCD-1B06804978A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

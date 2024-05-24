@@ -1,0 +1,28 @@
+﻿<header class="header">
+    <div class="nav">
+        <div class="nav__wrapper">
+            <a id="nav-index" class="nav-button" href="@Url.Action("GetAnekdots", "Home")">
+                <img class="nav__logo-image" src="~/images/anek365.png" alt="">
+            </a>
+        </div>
+        <nav class="nav__menu">
+            <div class="menu-element__wrapper">
+
+                <a class="menu-element" href="@Url.Action("GetAnekdots", "Home")">Анекдоты</a>
+            </div>
+            <div class="menu-element__wrapper">
+                <a class="menu-element" href="@Url.Action("GetTags", "Tags")">Тэги</a>
+            </div>
+            <div class="menu-element__wrapper">
+                <a class="menu-element" href="@Url.Action("GetUsers", "Users")">Пользователи</a>
+            </div>
+            <div class="menu-element__wrapper">
+                <a class="user-signup__button" href="@Url.Action("SignUp", "Login")">Регистрация</a>
+                <a class="user-login__button" href="@Url.Action("Login", "Login")">Войти</a>
+            </div>
+        </nav>
+        <a class="nav__clear-button header__logo" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            <img src="~/images/as.jpg" alt="a" style="height: 100px"/>
+        </a>
+    </div>
+</header>

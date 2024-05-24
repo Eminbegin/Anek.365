@@ -1,0 +1,51 @@
+﻿@model Anek._365.Presentation.Controllers.Creating.CreatingAnekdotViewModel;
+
+@{
+    ViewBag.Title = "Creating Anekdot";
+    Layout = "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/creating/creating-anek-styles.css" rel="stylesheet">
+    <link href="~/css/anekdots/anekdot-style.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <div class="creating-anek">
+        <div class="anek-form-container">
+            <div class="anek-title-container">
+                <input type="text" class="anek-form__input-title" placeholder="Заголовок" required>
+            </div>
+            <div class="anek-text-container">
+                <textarea class="anek-form__input-text" placeholder="Негр Загорает" required></textarea>
+            </div>
+            <button class="submit-button" type="button">Опубликовать</button>
+        </div>
+        
+        <form id="dataForm" method="post" action="@Url.Action("CreateAnek", "Creating")">
+            <input type="hidden" name="title" id="title" value="">
+            <input type="hidden" name="content" id="content" value="">
+            <input type="hidden" name="tags" id="tags" value="">
+        </form>
+        
+        <div class="create__anek__tags-container">
+            <div class="selected-tags-container">
+                <label>Выбранные теги:</label>
+                <ul id="selectedTags"></ul>
+            </div>
+            <div class="available-tags-container">
+                <label>Доступные теги:</label>
+                <ul id="availableTags">
+                    @foreach (var tag in Model.Tags)
+                    {
+                        <li class="tag" data-id=@tag.Id onclick="selectTag(this)">@tag.Name</li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="~/js/creating/creating-anek.js"></script>

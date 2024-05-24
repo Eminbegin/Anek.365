@@ -1,0 +1,105 @@
+.anek {
+    display: flex;
+    font-size: 24px;
+    flex-direction: row;
+    margin: 30px;
+    padding: 20px;
+    background-color: #632121;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 90%;
+}
+
+.anek__content {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.anek__title, .anek__text, .user-container, .tags-container{
+    width: 100%;
+}
+.anek__title {
+    font-size: 42px;
+}
+
+.anek__text {
+    font-size: 36px;
+    margin-bottom: 40px;
+    word-break: break-word;
+}
+
+.anek__info{
+    display: flex;
+    font-size: 24px;
+    flex-direction: column;
+    width: 20%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.anek__rating {
+    display: flex;
+    flex-direction: row;
+}
+
+.anek__mark-up {
+    color: green;
+}
+.anek__mark-down {
+    color: red;
+}
+
+.anek__mark-down,
+.anek__mark-up{
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.anek__views {
+}
+
+.anek__date {
+}
+
+.tags-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.tags-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/*.tag {*/
+/*    background-color: #00000033;*/
+/*    color: blueviolet;*/
+/*    padding: 5px;*/
+/*    border-radius: 5px;*/
+/*}*/
+
+.tag:hover, .user:hover {
+    background-color: orange;
+    color: green;
+}
+
+.user-container {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.user, .tag {
+    text-decoration: none;
+    background-color: #00000033;
+    color: greenyellow;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.user {
+    margin: 5px;
+}

@@ -1,0 +1,27 @@
+﻿@model Anek._365.Presentation.Controllers.Home.HomeViewModel
+
+@{
+    ViewBag.Title = Model.Title;
+    Layout = Model.User is null ? "_LayoutUnauthorized" : "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/shared/styles.css" rel="stylesheet">
+    <link href="~/css/shared/button-styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    @await Html.PartialAsync("_Selection")
+    @await Html.PartialAsync("_Aneks")
+</main>
+<script src="~/js/shared/styles.js"></script>
+<script src="~/js/shared/show-title.js"></script>
+<script src="~/js/shared/show-values.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/3.1.9/signalr.min.js"></script>
+<script src="~/js/anekdots/update-data.js"></script>

@@ -1,0 +1,56 @@
+﻿@model Anek._365.Presentation.Controllers.Login.SignUpErrorModel
+
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "_LayoutWithOutHeader";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/login/login-styles.css" rel="stylesheet">
+    <link href="~/css/shared/error-style.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <div class="login__content">
+        <a class="login__logo" href="@Url.Action("GetAnekdots", "Home")">
+            <img style="width: 100%;" src="/images/anek365.png" alt="Logo">
+        </a>
+        <div class="login-container">
+
+            <form class="login__form" method="post">
+                <div class="login__item">
+                    <label for="nickname" class="login__label">NickName</label>
+                    <input type="text" name="nickname" id="nickname" class="signup__input" required value="@(Model.NickName ?? string.Empty)"/>
+                </div>
+                <div class="login__item">
+                    <label for="email" class="login__label">Email</label>
+                    <input type="email" name="email" id="email" class="signup__input" required value="@(Model.Email ?? string.Empty)"/>
+                </div>
+                <div class="login__item">
+                    <label for="password" class="login__label">Телефон матери</label>
+                    <input type="password" name="password" id="password" class="signup__input" required minlength="6"/>
+                </div>
+
+                <div class="login__submit">
+                    <input class="login__submit-button" type="submit" value="СМАЧНО ПЁРНУТЬ"/>
+                </div>
+            </form>
+        </div>
+        @if (Model.Error is not null)
+        {
+            <label>
+                <input type="checkbox" class="alertCheckbox" autocomplete="off"/>
+                <div class="alert error">
+                    <span class="alertClose">X</span>
+                    <span class="alertText">
+                        @Model.Error
+                        <br class="clear"/>
+                    </span>
+                </div>
+            </label>
+        }
+    </div>
+</main>

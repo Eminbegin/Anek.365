@@ -1,0 +1,72 @@
+
+.creating-anek {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin: 30px;
+    padding: 20px;
+    background-color: #632121;
+    justify-content: space-around;
+    max-width: 100%;
+}
+
+.tags-container {
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    width: 25%;
+}
+
+.anek-form-container {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+}
+
+.anek-form__input-title {
+    color: white;
+    margin: 20px;
+    font-size: 30px;
+    background-color: black;
+    border: 2px solid orange;
+    width: 500px;
+    padding: 10px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.anek-form__input-text {
+    resize: vertical;
+    color: white;
+    background-color: black;
+    border: 2px solid orange;
+    border-radius: 1px;
+    height: 300px;
+    font-size: 25px;
+    width: 100%;
+    padding: 10px;
+    margin: 0 0 10px 20px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.create__anek__tags-container{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.submit-button{
+    color: orange;
+    border-color: white;
+    border-radius: 3px;
+    margin: 10px 0 10px 20px;
+}
+
+.available-tags-container, .selected-tags-container{
+    text-align: center;
+}

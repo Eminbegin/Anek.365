@@ -1,0 +1,6 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Anek.365.Application.Abstractions\Anek.365.Application.Abstractions.csproj" />
+    <ProjectReference Include="..\Anek.365.Application.Contracts\Anek.365.Application.Contracts.csproj" />
+  </ItemGroup>
+</Project>

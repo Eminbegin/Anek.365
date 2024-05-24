@@ -1,0 +1,41 @@
+﻿@model Anek._365.Presentation.Controllers.Users.UserListModel
+
+@{
+    ViewBag.Title = "Users";
+    Layout = Model.User is null ? "_LayoutUnauthorized" : "_Layout";
+}
+
+@section HeadArea {
+    <link href="~/css/styles.css" rel="stylesheet">
+    <link href="~/css/shared/styles.css" rel="stylesheet">
+    <link href="~/css/shared/button-styles.css" rel="stylesheet">
+    <link href="~/css/users/users-styles.css" rel="stylesheet">
+}
+
+@section FootArea { }
+
+<main>
+    <div class="selections-container">
+        <a class="prev_button" style="visibility: @(Model.PageNumber == 1 ? "hidden" : "visable")"
+           href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber - 1 })">
+            U+1F519
+        </a>
+
+        <a class="next_button" style="visibility: @(Model.PageNumber == Model.MaxPage ? "hidden" : "visable")"
+           href="@Url.Action($"{Model.Action}", $"{Model.Controller}", new { page = Model.PageNumber + 1 })">
+            U+1F519
+        </a>
+    </div>
+    <div class="users-container">
+        @foreach (var user in Model.Users)
+        {
+            <div class="user__single" data-count=@user.Count.ToString() data-name="@user.Name">
+                <a class="user__element"
+                   href="@Url.Action("GetNew", "Users", new { name = user.StandardName })">
+                    @user.Name
+                </a>
+            </div>
+        }
+    </div>
+</main>
+<script src="~/js/users/show-count.js"></script>

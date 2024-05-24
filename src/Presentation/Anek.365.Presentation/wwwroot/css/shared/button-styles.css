@@ -1,0 +1,57 @@
+﻿.selection__new {
+    text-align: center;
+    width: 15%;
+    font-family: "Kunstler Script", serif;
+    padding: 10px;
+    font-size: 20px;
+    border: 3px solid;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: black;
+}
+
+.selection__selected,
+.selection__no-selected:hover,
+.selection__values:hover {
+    color: orange;
+}
+
+.selection__no-selected {
+    text-decoration: none;
+    color: white;
+}
+
+.selection__popular-button,
+.selection__more-viewed-button {
+    font-family: "Kunstler Script", serif;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.selection__values {
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: 3px solid;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.next_button,
+.prev_button{
+    text-align: center;
+    width: 5%;
+    text-decoration: none;
+    border: 3px solid;
+    border-radius: 5px;
+    background-color: black;
+    color: darkviolet;
+}
